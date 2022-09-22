@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="670.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="national_gallery_route_finder.MainController">
+   <AnchorPane fx:id="anchorPane" minHeight="600.0" minWidth="600.0">
+      <children>
+            <ImageView fx:id="imageView" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         </ImageView>
+      </children>
+   </AnchorPane>
+   <Pane maxHeight="70.0" minHeight="70.0">
+       <Label layoutX="26.0" layoutY="6.0" text="Start point" />
+       <ComboBox fx:id="start" layoutX="14.0" layoutY="29.0" prefWidth="100.0" promptText="Start" />
+       <Label layoutX="148.0" layoutY="6.0" text="End point" />
+       <ComboBox fx:id="end" layoutX="124.0" layoutY="29.0" prefWidth="100.0" promptText="End" />
+       <Label layoutX="285.0" layoutY="6.0" text="Avoid Room" />
+       <ComboBox fx:id="avoid" layoutX="233.0" layoutY="29.0" prefHeight="25.0" prefWidth="100.0" promptText="Avoid" value="Avoid" />
+       <Button layoutX="336.0" layoutY="29.0" mnemonicParsing="false" onAction="#avoidThisRoom" text="Add" />
+       <Label layoutX="396.0" layoutY="6.0" text="Dijkstra" />
+       <Button layoutX="386.0" layoutY="29.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#dijkstra" text="Shortest" />
+       <Label layoutX="472.0" layoutY="6.0" text="Depth-First Search" />
+       <Button layoutX="456.0" layoutY="29.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#depthFirstSearchCheapest" text="Shortest" />
+       <Button layoutX="526.0" layoutY="29.0" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#depthFirstSearchAll" text="All" />
+   </Pane>
+</VBox>
